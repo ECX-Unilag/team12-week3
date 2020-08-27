@@ -1,0 +1,868 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "Espresso";
+  src: url("./SFEspressoShackCondensed-Bo.ttf") format("truetype");
+}
+
+body {
+  color: #4bbb78;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow: hidden;
+}
+
+#header {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .navbar {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 40px;
+}
+
+#header .navbar li {
+  display: inline;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+#header .navbar li.active {
+  border-bottom: 2px solid;
+}
+
+#header .navbar a {
+  color: #4bbb78;
+}
+
+#header .navbar a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/**********************
+        MOBILE NAV
+***********************/
+.menu-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.menu-btn-burger {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  background: #4bbb78;
+  height: 3px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 4px;
+  background: #4bbb78;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  width: 20px;
+  height: 3px;
+  background: #4bbb78;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.menu-btn.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+  z-index: 99999;
+}
+
+.menu-btn.open::before {
+  height: 3px;
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.menu-btn.open::after {
+  width: 28px;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.menu-btn-burger.open {
+  display: none;
+}
+
+.mobile-header {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 80vw;
+  opacity: 0.8;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mobile-header.open {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99;
+}
+
+.mobile-header .mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #d1d9e6;
+  padding-right: 1rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.mobile-header .mobile-nav.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.mobile-header li {
+  list-style: none;
+  padding: 20px 30px 0 30px;
+}
+
+.mobile-header li.active {
+  border-bottom: 2px solid;
+}
+
+.mobile-header li a {
+  color: #4bbb78;
+}
+
+.mobile-header li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon {
+  overflow-y: hidden;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icon a {
+  color: #4bbb78;
+}
+
+.icon a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon img {
+  width: 100px;
+  height: 50px;
+}
+
+.icon .header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.icon .header-title h4 {
+  font-family: espresso;
+  width: -webkit-fill-available;
+  padding-left: 50px;
+}
+
+.icon .header-title span {
+  color: #fff;
+}
+
+.icon.mobile {
+  position: absolute;
+  z-index: 1;
+}
+
+/**********************
+       HOME
+***********************/
+#home {
+  position: relative;
+}
+
+#home .search {
+  position: absolute;
+  top: 350px;
+  left: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+
+#home .search #search-form {
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
+
+#home .search #search-form input {
+  padding: 10px;
+  width: 60vw;
+  border: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#home .search #search-form input:focus {
+  outline: none;
+}
+
+#home .search #search-form button {
+  background: none;
+  border: none;
+}
+
+#home .search #search-form i {
+  color: #fff;
+  padding-right: 10px;
+}
+
+#foods {
+  padding-top: 50px;
+}
+
+#foods h5 {
+  font-weight: 700;
+  padding: 20px;
+}
+
+#foods .food-item {
+  padding: 20px 70px;
+}
+
+#foods .food-item img {
+  width: 100%;
+  border-radius: 100px;
+}
+
+#foods .food-item h6,
+#foods .food-item p {
+  color: #000;
+}
+
+#foods .food-item h6 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#foods .food-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 50px;
+}
+
+#foods .food-btn a {
+  border: 1px solid #4bbb78;
+  padding: 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #000;
+}
+
+#foods .food-btn a:hover {
+  background-color: #4bbb78;
+  color: #fff;
+  text-decoration: none;
+}
+
+#states {
+  padding-top: 50px;
+}
+
+#states h5 {
+  font-weight: 700;
+  padding: 20px;
+}
+
+#states .state-item {
+  padding: 20px 30px;
+}
+
+#states .state-item img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+#states .state-item h6,
+#states .state-item p {
+  color: #000;
+}
+
+#states .state-item h6 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#states .state-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 50px;
+}
+
+#states .state-btn a {
+  border: 1px solid #4bbb78;
+  padding: 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #000;
+}
+
+#states .state-btn a:hover {
+  background-color: #4bbb78;
+  color: #fff;
+  text-decoration: none;
+}
+
+/**********************
+       FOOTER
+***********************/
+#footer .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+
+#footer .welcome h5 {
+  font-weight: 700;
+}
+
+#footer .welcome p {
+  width: 500px;
+  color: #000;
+  text-align: left;
+}
+
+#footer footer {
+  background-color: #4bbb78;
+  padding: 10px;
+  color: #fff;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer footer .footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -25px;
+}
+
+#footer footer .footer-logo h4 {
+  font-family: espresso;
+  padding-left: 30px;
+  width: -webkit-fill-available;
+}
+
+#footer footer .footer-logo p {
+  font-size: 10px;
+}
+
+#footer footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+}
+
+#footer footer .social-links a {
+  color: #fff;
+  padding: 20px;
+}
+
+#footer footer .copyright {
+  margin-top: 70px;
+}
+
+#footer footer .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+#footer footer .footer-nav ul li {
+  padding: 5px;
+}
+
+#footer footer .footer-nav ul a {
+  color: #fff;
+}
+
+/**********************
+       FLIGHT BOOKING
+***********************/
+#flight .flight-img {
+  height: 150px;
+}
+
+#flight .flight-img img {
+  width: 100vw;
+}
+
+#flight .booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#flight .booking h4 {
+  padding: 20px;
+}
+
+#flight .booking #booking-form {
+  background-color: #4bbb78;
+  width: 90%;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+#flight .booking #booking-form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#flight .booking #booking-form .input label {
+  margin-top: 5px;
+  color: #fff;
+}
+
+#flight .booking #booking-form .input input[type="name"] {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+#flight .booking #booking-form .input input[type="name"]:focus {
+  outline: none;
+  border: none;
+}
+
+#flight .booking #booking-form .input.dates {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#flight .booking #booking-form .input .depart,
+#flight .booking #booking-form .input .return {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#flight .booking #booking-form .input .depart input,
+#flight .booking #booking-form .input .return input {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+#flight .booking #booking-form .input .depart input:focus,
+#flight .booking #booking-form .input .return input:focus {
+  outline: none;
+  border: none;
+}
+
+#flight .booking #booking-form .radio {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#flight .booking #booking-form .radio label {
+  padding: 0 10px;
+}
+
+#flight .booking #booking-form .submit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#flight .booking #booking-form .submit-btn button {
+  padding: 10px 5px;
+  color: #fff;
+  margin-top: 20px;
+  background-color: rgba(85, 85, 85, 0.6);
+  border: none;
+  border-radius: 25px;
+}
+
+/**********************
+       RESTAURANT
+***********************/
+#restaurant .header-img {
+  height: 150px;
+}
+
+#restaurant .header-img img {
+  width: 100%;
+}
+
+#restaurant .book-restaurant h3 {
+  padding: 30px;
+  font-weight: 800;
+}
+
+#restaurant .book-restaurant .dish-item {
+  padding: 20px 70px;
+}
+
+#restaurant .book-restaurant .dish-item img {
+  width: 100%;
+}
+
+#restaurant .book-restaurant .dish-item button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 15px;
+  background: #026102;
+  color: #fff;
+}
+
+#restaurant .book-restaurant .dish-item .star-div {
+  margin-top: -15px;
+}
+
+#restaurant .book-restaurant .dish-item .star-div span {
+  color: #d1d9e6;
+}
+
+#restaurant .book-restaurant .dish-item .star-div span.checked {
+  color: #026102;
+}
+
+/**********************
+		GUIDES
+***********************/
+#guides .guide-img img,
+#abuja .guide-img img,
+#lagos .guide-img img,
+#enugu .guide-img img {
+  width: 100%;
+}
+
+#guides .guide-div h3,
+#abuja .guide-div h3,
+#lagos .guide-div h3,
+#enugu .guide-div h3 {
+  font-weight: 800;
+  padding: 30px;
+}
+
+#guides .guide-item,
+#abuja .guide-item,
+#lagos .guide-item,
+#enugu .guide-item {
+  margin-top: 20px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#guides .guide-item .guide-style,
+#abuja .guide-item .guide-style,
+#lagos .guide-item .guide-style,
+#enugu .guide-item .guide-style {
+  width: 80%;
+  height: 100%;
+  background: #4bbb78;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#guides .guide-item a,
+#abuja .guide-item a,
+#lagos .guide-item a,
+#enugu .guide-item a {
+  color: #fff;
+  text-align: center;
+}
+
+#guides .guide-item a:hover,
+#abuja .guide-item a:hover,
+#lagos .guide-item a:hover,
+#enugu .guide-item a:hover {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  #home .search {
+    top: 15vh;
+  }
+  .icon img {
+    width: 60px;
+    height: 30px;
+  }
+  .icon .header-title {
+    margin-left: -20px;
+  }
+  #guides .guide-item a {
+    padding: 10px 30px;
+  }
+  #footer .welcome p {
+    width: auto;
+    padding: 10px;
+  }
+  #footer footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #footer footer .footer-nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+  }
+  #footer footer .footer-nav ul a {
+    padding: 10px;
+  }
+  #footer footer .footer-logo {
+    margin-top: 2px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #footer footer .social-links {
+    padding-top: 0;
+    margin-top: -60px;
+  }
+  #footer footer .social-links .socials {
+    margin-left: 150px;
+  }
+  #footer footer .social-links .copyright {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 980px) {
+  main {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  #header {
+    width: 80vw;
+  }
+  #home .search {
+    left: 20vw;
+  }
+  #home .search #search-form input {
+    width: 40vw;
+  }
+  #footer footer .footer-nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #footer footer .footer-nav ul a {
+    padding: 10px;
+  }
+  #footer footer .social-links {
+    margin-left: 180px;
+  }
+  .flight-img img {
+    width: 80vw;
+  }
+}
+/*# sourceMappingURL=app.css.map */
