@@ -566,17 +566,11 @@ a[href="https://elfsight.com/whatsapp-chat-widget/?utm_source=websites&utm_mediu
   outline: none;
 }
 
-#contact input[type="number"]::-webkit-inner-spin-button,
-#contact input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 #contact input[type="number"] {
   -moz-appearance: textfield;
 }
 
-#contact #Submit {
+#contact .submit-btn button {
   width: auto;
   padding: 10px;
   background: white;
@@ -587,25 +581,62 @@ a[href="https://elfsight.com/whatsapp-chat-widget/?utm_source=websites&utm_mediu
   border-radius: 10px;
 }
 
-#contact #Submit:hover {
+#contact .submit-btn button:hover {
   background: #04ba78;
   color: white;
 }
 
-#contact .msg-sent,
-#contact .msg-not-sent {
+#contact .success,
+#contact .loading,
+#contact .failed {
   display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  padding: 20px 0 0;
 }
 
-#contact .info {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+#contact .loading::after {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  overflow: hidden;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
-#contact .info p {
-  font-size: small;
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /**********************

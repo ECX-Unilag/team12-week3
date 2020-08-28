@@ -453,46 +453,59 @@ a[href="https://elfsight.com/whatsapp-chat-widget/?utm_source=websites&utm_mediu
 		}
 	}
 
-	input[type="number"]::-webkit-inner-spin-button,
-	input[type="number"]::-webkit-outer-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
-	}
-
 	input[type="number"] {
 		-moz-appearance: textfield;
 	}
 
-	#Submit {
-		width: auto;
-		padding: 10px;
-		background: white;
-		font-size: medium;
-		border: none;
-		font-weight: bold;
-		color: #04ba78;
-		border-radius: 10px;
+	.submit-btn {
+		button {
+			width: auto;
+			padding: 10px;
+			background: white;
+			font-size: medium;
+			border: none;
+			font-weight: bold;
+			color: #04ba78;
+			border-radius: 10px;
+		}
 	}
 
-	#Submit:hover {
+	.submit-btn button:hover {
 		background: #04ba78;
 		color: white;
 	}
 
-	.msg-sent,
-	.msg-not-sent {
+	.success,
+	.loading,
+	.failed {
 		display: none;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		color: #fff;
+		padding: 20px 0 0;
+	}
+	.loading::after {
+		display: inline-flex;
+		content: "";
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 3px solid $background;
+		border-bottom: none;
+		border-left: none;
+		overflow: hidden;
+		animation: spin 1s linear infinite;
 	}
 
-	.info {
-		display: block;
-		width: 100%;
-		margin: 0 auto;
-		text-align: center;
-	}
+	@keyframes spin {
+		0% {
+			transform: rotate(0);
+		}
 
-	.info p {
-		font-size: small;
+		100% {
+			transform: rotate(360deg);
+		}
 	}
 }
 /**********************
