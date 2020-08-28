@@ -389,6 +389,13 @@ div {
 
 #live-chat .chat-btn {
   border: 1px solid #4bbb78;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
   background: #4bbb78;
   color: #fff;
@@ -400,7 +407,10 @@ div {
   background: #4bbb78;
   height: 10px;
   margin-left: 10px;
+  margin-top: -3px;
   width: 10px;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
 }
 
 #live-chat .chat-open {

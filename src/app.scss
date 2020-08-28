@@ -294,6 +294,9 @@ div {
 	flex-direction: column;
 	.chat-btn {
 		border: 1px solid $foreground;
+		width: 40px;
+		display: flex;
+		justify-content: center;
 		padding: 5px;
 		background: $foreground;
 		color: $background;
@@ -304,7 +307,9 @@ div {
 		background: $foreground;
 		height: 10px;
 		margin-left: 10px;
+		margin-top: -3px;
 		width: 10px;
+		transform: rotate(60deg);
 	}
 	.chat-open {
 		display: none;
