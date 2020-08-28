@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from 'react-router-dom';
 import AOS from "aos";
 import Home from "./Pages/Home";
