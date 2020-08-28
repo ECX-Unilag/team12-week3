@@ -4,7 +4,7 @@ const Chat = () => {
 
     return (
         <div id="live-chat">
-            <div class="elfsight-app-0104f104-879b-462e-bfb6-b9e668550217"></div>
+            <div className="elfsight-app-0104f104-879b-462e-bfb6-b9e668550217"></div>
         </div>
     )
 }
