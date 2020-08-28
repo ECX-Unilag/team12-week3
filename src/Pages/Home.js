@@ -69,13 +69,13 @@ return (
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img className="d-block w-100" src="img/ikogosi.jpg" alt="First slide"/>
+              <img className="d-block w-100" src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629468/Tour%20App/ikogosi_catxbz.jpg" alt="First slide"/>
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src="img/kajuru2.jpg" alt="Second slide"/>
+              <img className="d-block w-100" src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629468/Tour%20App/kajuru2_a7wnfg.jpg" alt="Second slide"/>
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src="img/Olumo-Rock.jpg" alt="Third slide"/>
+              <img className="d-block w-100" src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629472/Tour%20App/Olumo-Rock_rcod8d.jpg" alt="Third slide"/>
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

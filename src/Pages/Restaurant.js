@@ -24,7 +24,7 @@ const Restaurant = () => {
                 <h3 className="text-center" data-aos="fade-right">Book Restaurant</h3>
                 <div className="dish row">
                 <div className="dish-item col-lg-4 col-md-6 col-sm-6" data-aos="fade-up-right" data-aos-delay="100">
-                    <img src="img/jollof.jpg" alt="jollof rice" />
+                    <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629465/Tour%20App/jollof_f6uadr.jpg" alt="jollof rice" />
                     <h6><strong>Jollof Rice</strong></h6>
                     <p><strong>Lagos state</strong></p>
                     <div className="star-div">
@@ -39,7 +39,7 @@ const Restaurant = () => {
                 </div>
 
                 <div className="dish-item col-lg-4 col-md-6 col-sm-6" data-aos="fade-up-left"  data-aos-delay="100">
-                    <img src="img/pounded.jpg" alt="pounded yam" />
+                    <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629471/Tour%20App/pounded_f11zxi.jpg" alt="pounded yam" />
                     <h6><strong>JK Restaurant</strong></h6>
                     <p><strong>Oyo state</strong></p>
                     <div className="star-div">
@@ -53,7 +53,7 @@ const Restaurant = () => {
                 </div>
 
                 <div className="dish-item col-lg-4 col-md-6 col-sm-6" data-aos="fade-up-left" data-aos-delay="100">
-                    <img src="img/suya.jpeg" alt="suya" />
+                    <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629472/Tour%20App/suya_y8tlz5.jpg" alt="suya" />
                     <h6><strong>HS Restaurant</strong></h6>
                     <p><strong>Kano state</strong></p>
                     <div className="star-div">
@@ -67,7 +67,7 @@ const Restaurant = () => {
                 </div>
 
                 <div className="dish-item col-lg-4 col-md-6 col-sm-6" data-aos="fade-up-right" data-aos-delay="100">
-                    <img src="img/afang.jpg" alt="afang soup" />
+                    <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629475/Tour%20App/afang_ocdyzx.jpg" alt="afang soup" />
                     <h6><strong>CK Restaurant</strong></h6>
                     <p><strong>Ebonyi state</strong></p>
                     <div className="star-div">
@@ -81,7 +81,7 @@ const Restaurant = () => {
                 </div>
 
                 <div className="dish-item col-lg-4 col-md-6 col-sm-6" data-aos="fade-up-left" data-aos-delay="100">
-                    <img src="img/tuwo.jpg" alt="Tuwo shinkafa" />
+                    <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629473/Tour%20App/tuwo_gxigau.jpg" alt="Tuwo shinkafa" />
                     <h6><strong>KK Restaurant</strong></h6>
                     <p><strong>Kaduna state</strong></p>
                     <div className="star-div">
@@ -95,7 +95,7 @@ const Restaurant = () => {
                 </div>
 
                 <div className="dish-item col-lg-4 col-md-6 col-sm-6" data-aos="fade-up-right" data-aos-delay="100">
-                    <img src="img/garri.jpg" alt="garri" />
+                    <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629464/Tour%20App/garri_newqtb.jpg" alt="garri" />
                     <h6><strong>HR Restaurant</strong></h6>
                     <p><strong>Ogun state</strong></p>
                     <div className="star-div">
