@@ -52,7 +52,7 @@ const Navbar = () => {
         <span className="menu-btn-burger" ref={input2Ref}></span>
     </div>
     <div className="icon mobile" data-aos="fade-right">
-        <img src="img/nigeria-flag.png" alt="nigeria-flag" />
+        <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1598629470/Tour%20App/nigeria-flag_sybtrz.png" alt="nigeria-flag" />
         <div className="header-title">
             <h4>NTG</h4>
             <p>Nigeria <span>Tourist</span> Guide</p>
