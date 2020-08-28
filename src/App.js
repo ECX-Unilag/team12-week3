@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from 'react-router-dom';
 import AOS from "aos";
 import Home from "./Pages/Home";
@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import Guides from "./Pages/Guides";
 import Contact from "./Pages/Contact";
 import Flight from "./Pages/Flight";
+import Search from "./Pages/Search";
 import Restaurant from "./Pages/Restaurant";
 import Abuja from "./Pages/Guides/Abuja";
 import Enugu from "./Pages/Guides/Enugu";
@@ -40,6 +41,7 @@ import "./app.css";
               <Route path="/abuja-guide" render={renderprops => <Abuja {...renderprops} />} />
               <Route path="/lagos-guide" render={renderprops => <Lagos {...renderprops} />} />
               <Route path="/enugu-guide" render={renderprops => <Enugu {...renderprops} />} />
+              <Route path="/search" render={renderprops => <Search {...renderprops} />} />
               <Route path="/contact" render={renderprops => <Contact {...renderprops} />} />
               <Route render={renderprops => <Error {...renderprops} />} />
           </Switch>

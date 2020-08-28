@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import Chat from '../Components/Chat';
 
 const Restaurant = () => {
     useEffect(() => {
@@ -84,7 +85,7 @@ const Restaurant = () => {
                     <h6><strong>KK Restaurant</strong></h6>
                     <p><strong>Kaduna state</strong></p>
                     <div className="star-div">
-                        <span className="fa fa-star"></span>
+                        <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
@@ -98,7 +99,7 @@ const Restaurant = () => {
                     <h6><strong>HR Restaurant</strong></h6>
                     <p><strong>Ogun state</strong></p>
                     <div className="star-div">
-                        <span className="fa fa-star"></span>
+                        <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
@@ -109,6 +110,7 @@ const Restaurant = () => {
             </div>
             </div>
         </section>
+        <Chat />
         <Footer />
         </>
     )

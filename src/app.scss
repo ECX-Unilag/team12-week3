@@ -24,7 +24,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+div {
 	overflow: hidden;
 }
 
@@ -58,7 +59,9 @@ p {
 		}
 	}
 }
-
+.aos-animate {
+	overflow: hidden;
+}
 /**********************
         MOBILE NAV
 ***********************/
@@ -215,16 +218,15 @@ p {
 
 	.search {
 		position: absolute;
-		top: 350px;
+		top: 250px;
 		left: 20vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		z-index: 3;
 
 		#search-form {
 			border: 1px solid #fff;
 			border-radius: 15px;
+			position: relative;
+			display: inline-block;
 			input {
 				padding: 10px;
 				width: 60vw;
@@ -245,6 +247,67 @@ p {
 				padding-right: 10px;
 			}
 		}
+	}
+}
+#searchResult {
+	margin-top: -8px;
+	width: 85%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	#results {
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.5);
+		height: 110px;
+		overflow-y: scroll;
+		a {
+			color: $foreground;
+		}
+	}
+}
+
+#search-title {
+	font-weight: 700;
+	margin-top: 30px;
+	text-align: center;
+}
+#search-snippet {
+	padding: 5px;
+	color: #000;
+}
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	a {
+		padding: 0 40px 0 10px;
+		color: $foreground;
+	}
+}
+#live-chat {
+	position: fixed;
+	bottom: 20vh;
+	right: 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	.chat-btn {
+		border: 1px solid $foreground;
+		padding: 5px;
+		background: $foreground;
+		color: $background;
+		border-radius: 10px;
+		font-weight: 700;
+	}
+	.btn-arrow {
+		background: $foreground;
+		height: 10px;
+		margin-left: 10px;
+		width: 10px;
+	}
+	.chat-open {
+		display: none;
 	}
 }
 
@@ -648,9 +711,12 @@ p {
 			width: 40vw;
 		}
 	}
+	#searchResult #results {
+		height: 300px;
+		width: 100%;
+	}
 	#footer footer {
 		.footer-nav ul {
-			flex-direction: row;
 			a {
 				padding: 10px;
 			}
@@ -662,5 +728,13 @@ p {
 
 	.flight-img img {
 		width: 80vw;
+	}
+}
+
+@media (min-width: 1170px) {
+	#footer footer {
+		.footer-nav ul {
+			flex-direction: row;
+		}
 	}
 }

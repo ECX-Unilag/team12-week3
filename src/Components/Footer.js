@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <div id="footer">
-            <div className="text-center welcome" data-aos="zoom-in" data-aos-delay="200">
+            <div className="text-center welcome" data-aos="fade-up" data-aos-delay="200">
                 <h5>Welcome To Nigeria</h5>
                 <p>Discover a fascinating country: take a trip to one of the most beautiful places on earth. Nigeria is filled with vast unspoiled natue. It is a land filled with beautiful contrasts. From the Sahel region of the north to the wetlands of southern Nigeria, there is something for everyone.</p>
                 <p>Nigeria is a country of over 300 tibes and a population of over 180 million people. If you are lookin for the best afro music festival, the adrenaline of an outdoor adventure, lovely beaches, tasty delicacies or the experience of a breath-taking road trip, then Nigeria is for you.</p>
