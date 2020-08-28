@@ -479,6 +479,135 @@ a[href="https://elfsight.com/whatsapp-chat-widget/?utm_source=websites&utm_mediu
   text-decoration: none;
 }
 
+#about, #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about h3, #contact h3 {
+  font-weight: 700;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#about p, #contact p {
+  width: 500px;
+  padding: 5px 50px;
+  color: #000;
+}
+
+#contact form {
+  background: #04ba78;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#contact .input-field {
+  position: relative;
+  border-bottom: 2px solid;
+  margin-top: 40px;
+  color: white;
+  width: 80%;
+}
+
+#contact label {
+  position: absolute;
+  top: 0;
+  font-size: 13px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+#contact #firstname,
+#contact #lastname,
+#contact #email,
+#contact #phone-number {
+  display: block;
+  width: 90%;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: white;
+}
+
+#contact .user-1:focus ~ label,
+#contact .user-1:valid ~ label {
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+#contact textarea {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  resize: none;
+  border-radius: 10px;
+  width: 80%;
+  padding: 5px 0 0 10px;
+  height: 50px;
+}
+
+#contact textarea:focus {
+  outline: none;
+}
+
+#contact input[type="number"]::-webkit-inner-spin-button,
+#contact input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#contact input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#contact #Submit {
+  width: auto;
+  padding: 10px;
+  background: white;
+  font-size: medium;
+  border: none;
+  font-weight: bold;
+  color: #04ba78;
+  border-radius: 10px;
+}
+
+#contact #Submit:hover {
+  background: #04ba78;
+  color: white;
+}
+
+#contact .msg-sent,
+#contact .msg-not-sent {
+  display: none;
+}
+
+#contact .info {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contact .info p {
+  font-size: small;
+}
+
 /**********************
        FOOTER
 ***********************/
@@ -887,6 +1016,9 @@ a[href="https://elfsight.com/whatsapp-chat-widget/?utm_source=websites&utm_mediu
   }
   #footer footer .social-links .copyright {
     margin-top: 60px;
+  }
+  #about p, #contact p {
+    width: auto;
   }
 }
 
